@@ -1,0 +1,102 @@
+.carousel__slide {
+  user-select: none;
+}
+
+.carousel__slide img {
+  width: 100%;
+  height: auto;
+}
+
+.carousel__arrow {
+  border: none;
+  background: transparent;
+  position: absolute;
+  display: block;
+  top: 50%;
+  z-index: 2;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: 125ms opacity ease-in-out;
+  transform: translateY(-50%);
+  line-height: 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 56px;
+  height: 56px;
+}
+
+.carousel__arrow:focus {
+  outline: none;
+}
+
+.carousel__arrow:hover {
+  opacity: 1;
+}
+
+.carousel__arrow--left {
+  left: 16px;
+  background-image: url("./arrow-left.svg");
+}
+
+.carousel__arrow--right {
+  right: 16px;
+  background-image: url("./arrow-right.svg");
+}
+
+.carousel__arrow--disabled {
+  opacity: 0.33;
+}
+
+.carousel__bullets {
+  position: absolute;
+  z-index: 2;
+  bottom: 32px;
+  left: 50%;
+  display: inline-flex;
+  list-style: none;
+  transform: translateX(-50%);
+}
+
+.carousel__bullet {
+  background: transparent;
+  border: none;
+  opacity: 0.5;
+  padding: 8px 4px;
+  transition: 125ms all ease-in-out;
+  cursor: pointer;
+  line-height: 0;
+  margin: 0;
+}
+
+.carousel__bullet::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 3px;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+}
+
+.carousel__bullet:focus {
+  outline: none;
+}
+
+.carousel__bullet:hover,
+.carousel__bullet:focus {
+  opacity: 1;
+}
+
+.carousel__bullet--active {
+  opacity: 1;
+}
+
+/* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}

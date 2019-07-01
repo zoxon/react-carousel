@@ -50,8 +50,15 @@ function Home(props) {
             <code>npm install @zoxon/react-carousel</code>
             <h3>Download</h3>
             <p>
-              You can also traditionally download latest files from the Github:{" "}
-              <a href="#">Download latest release</a>
+              You can also traditionally download latest files from the Github:
+              <br />
+              <a
+                href="https://github.com/zoxon/react-carousel/archive/master.zip"
+                target="_blank"
+                rel="nofollow noopener"
+              >
+                Download latest release
+              </a>
             </p>
           </section>
 
@@ -60,8 +67,10 @@ function Home(props) {
             <pre className="code">
               <code className="code__container">{`import { Carousel, Slide } from "@zoxon/react-carousel";
 
-<Carousel arrows bullets autoplay={3000}>
-  <img src="/images/slide.jpg" alt="Image alternative text" />
+<Carousel>
+  <img src="/images/slide1.jpg" alt="Slide 1" />
+  <img src="/images/slide2.jpg" alt="Slide 2" />
+  <img src="/images/slide3.jpg" alt="Slide 3" />
 </Carousel>`}</code>
             </pre>
           </section>
@@ -82,7 +91,7 @@ function Home(props) {
                 <tr>
                   <td>children</td>
                   <td>Node</td>
-                  <td />
+                  <td>Required</td>
                   <td>Slides, is required prop</td>
                 </tr>
                 <tr>

@@ -18,7 +18,14 @@ function Header(props) {
           <Button to="#get-started" theme="solid rounded" color="indigo">
             Get started
           </Button>
-          <Button to="#" theme="outlined rounded" color="black" icon={true}>
+          <Button
+            to="https://github.com/zoxon/react-carousel"
+            target="_blank"
+            rel="nofollow noopener"
+            theme="outlined rounded"
+            color="black"
+            icon={true}
+          >
             <Icon name="octocat" />
             <span>Visit Github</span>
           </Button>

@@ -55,6 +55,6 @@
   user-select: none;
 }
 
-.carousel--rtl {
+.carousel_rtl {
   direction: rtl;
 }

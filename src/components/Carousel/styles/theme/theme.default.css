@@ -33,17 +33,17 @@
   opacity: 1;
 }
 
-.carousel__arrow--left {
+.carousel__arrow_left {
   left: 16px;
   background-image: url("./arrow-left.svg");
 }
 
-.carousel__arrow--right {
+.carousel__arrow_right {
   right: 16px;
   background-image: url("./arrow-right.svg");
 }
 
-.carousel__arrow--disabled {
+.carousel__arrow_disabled {
   opacity: 0.33;
 }
 
@@ -87,7 +87,7 @@
   opacity: 1;
 }
 
-.carousel__bullet--active {
+.carousel__bullet_active {
   opacity: 1;
 }
 

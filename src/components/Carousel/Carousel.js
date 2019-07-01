@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import throttle from "lodash-es/throttle";
+import throttle from "lodash/throttle";
 
 export default class Carousel extends React.PureComponent {
   static defaultProps = {
@@ -137,7 +137,7 @@ export default class Carousel extends React.PureComponent {
           key={index}
           className={
             index === this.state.currentSlide
-              ? "carousel__bullet carousel__bullet--active"
+              ? "carousel__bullet carousel__bullet_active"
               : "carousel__bullet"
           }
           onClick={() => this.onBulletClick(index)}
@@ -154,7 +154,7 @@ export default class Carousel extends React.PureComponent {
     const { children, arrows, bullets } = this.props;
 
     return (
-      <div className="carousel carousel--ltr">
+      <div className="carousel carousel_ltr">
         <div
           className="carousel__track"
           ref={trackEl => (this.trackEl = trackEl)}
@@ -171,7 +171,7 @@ export default class Carousel extends React.PureComponent {
                     }}
                     className={
                       index === this.state.currentSlide
-                        ? "carousel__slide carousel__slide--active"
+                        ? "carousel__slide carousel__slide_active"
                         : "carousel__slide"
                     }
                   >
@@ -185,13 +185,13 @@ export default class Carousel extends React.PureComponent {
         {arrows && (
           <div className="carousel__arrows">
             <button
-              className="carousel__arrow carousel__arrow--left"
+              className="carousel__arrow carousel__arrow_left"
               onClick={() => this.onArrowClick("prev")}
             >
               <span className="visually-hidden">Previous</span>
             </button>
             <button
-              className="carousel__arrow carousel__arrow--right"
+              className="carousel__arrow carousel__arrow_right"
               onClick={() => this.onArrowClick("next")}
             >
               <span className="visually-hidden">Next</span>

@@ -1,0 +1,12 @@
+.container {
+  flex-shrink: 0;
+  max-width: 1168px;
+  margin: 0 auto;
+  padding-right: 24px;
+  padding-left: 24px;
+  -ms-flex-negative: 0;
+}
+
+.container_fluid {
+  max-width: none;
+}

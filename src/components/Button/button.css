@@ -1,0 +1,217 @@
+/* https://github.com/zoxon/gulp-front/blob/master/source/modules/button/button.styl */
+
+.button {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-bottom: 0;
+  padding: 0;
+  font-weight: normal;
+  line-height: normal;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  background-image: none;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 0;
+  cursor: pointer;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 125ms;
+  transition-duration: 125ms;
+  -webkit-transition-property: color, border-color, background-color,
+    background-image;
+  transition-property: color, border-color, background-color, background-image;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
+.button:hover,
+.button:focus {
+  text-decoration: none;
+}
+
+.button:active,
+.button_active {
+  background-image: none;
+  outline: none;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.button_disabled,
+.button[disabled],
+a.button_disabled,
+.button_disabled:hover,
+.button[disabled]:hover,
+a.button_disabled:hover,
+.button_disabled:focus,
+.button[disabled]:focus,
+a.button_disabled:focus,
+.button_disabled:active,
+.button[disabled]:active,
+a.button_disabled:active {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  opacity: 0.65;
+  pointer-events: none;
+}
+
+.button_block {
+  display: block;
+  width: 100%;
+}
+
+.button_icon {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
+  -ms-flex-pack: center;
+}
+
+.button_icon svg {
+  max-width: 100%;
+  max-width: 100%;
+  fill: currentColor;
+}
+
+.button_icon img {
+  width: auto;
+  height: 1em;
+}
+
+.button_icon svg,
+.button_icon img,
+.button_icon .spinner {
+  max-width: 1em;
+  max-height: 1em;
+}
+
+.button_icon svg + span,
+.button_icon img + span,
+.button_icon .spinner + span {
+  margin-left: 0.5em;
+}
+
+.button_icon span + svg,
+.button_icon span + img,
+.button_icon span + .spinner {
+  margin-left: 0.5em;
+}
+
+.button {
+  padding: 0.8em 1em;
+}
+
+.button_size_small {
+  font-size: 75%;
+}
+
+.button_size_medium {
+  font-size: 100%;
+}
+
+.button_size_large {
+  font-size: 125%;
+}
+
+.button_theme_rounded {
+  border-radius: 3px;
+}
+
+.button_theme_pill {
+  border-radius: 50em;
+}
+
+.button_theme_solid.button_color_gray {
+  color: #868e96;
+  background-color: #e9ecef;
+}
+
+.button_theme_solid.button_color_gray:focus,
+.button_theme_solid.button_color_gray:hover,
+.button_theme_solid.button_color_gray:active {
+  color: #868e96;
+  background-color: #dee2e6;
+}
+
+.button_theme_solid.button_color_black {
+  color: #fff;
+  background-color: #212529;
+}
+
+.button_theme_solid.button_color_black:focus,
+.button_theme_solid.button_color_black:hover,
+.button_theme_solid.button_color_black:active {
+  color: #fff;
+  background-color: #343a40;
+}
+
+.button_theme_solid.button_color_indigo {
+  color: #fff;
+  background-color: #4c6ef5;
+}
+
+.button_theme_solid.button_color_indigo:focus,
+.button_theme_solid.button_color_indigo:hover,
+.button_theme_solid.button_color_indigo:active {
+  color: #fff;
+  background-color: #5c7cfa;
+}
+
+.button_theme_outlined {
+  border-width: 1px;
+  border-style: solid;
+}
+
+.button_theme_outlined.button_color_gray {
+  color: #868e96;
+  background-color: transparent;
+  border-color: #868e96;
+}
+
+.button_theme_outlined.button_color_gray:focus,
+.button_theme_outlined.button_color_gray:hover,
+.button_theme_outlined.button_color_gray:active {
+  color: #fff;
+  background-color: #495057;
+  border-color: #495057;
+}
+
+.button_theme_outlined.button_color_black {
+  color: #212529;
+  background-color: transparent;
+  border-color: #212529;
+}
+
+.button_theme_outlined.button_color_black:focus,
+.button_theme_outlined.button_color_black:hover,
+.button_theme_outlined.button_color_black:active {
+  color: #fff;
+  background-color: #212529;
+  border-color: #212529;
+}
+
+.button_theme_outlined.button_color_indigo {
+  color: #4c6ef5;
+  background-color: transparent;
+  border-color: #4c6ef5;
+}
+
+.button_theme_outlined.button_color_indigo:focus,
+.button_theme_outlined.button_color_indigo:hover,
+.button_theme_outlined.button_color_indigo:active {
+  color: #fff;
+  background-color: #4c6ef5;
+  border-color: #4c6ef5;
+}

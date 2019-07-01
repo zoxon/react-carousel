@@ -1,0 +1,31 @@
+.header__container {
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.header__title {
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 56px;
+  color: #000;
+  margin: 0 0 8px 0;
+}
+
+.header__description {
+  font-size: 18px;
+  line-height: 21px;
+  color: #4f4f4f;
+  margin-bottom: 48px;
+}
+
+.header__buttons * + * {
+  margin-left: 16px;
+}
+
+@media only screen and (max-width: 640px) {
+  .header__container {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+}

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "classnames": "^2.2.6",
     "littera": "zoxon/littera",
     "lodash-es": "^4.17.11",
     "normalize.css": "^8.0.1",

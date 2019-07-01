@@ -4,6 +4,7 @@ import Header from "components/Header";
 import Footer from "components/Footer";
 import Container from "components/Container";
 
+import "./home.css";
 import "components/Carousel/styles/core.css";
 import "components/Carousel/styles/theme/theme.default.css";
 
@@ -18,7 +19,7 @@ function Home(props) {
     <div className="home-page">
       <Header className="home-page__header" />
 
-      <div className="home-page__body">
+      <main className="home-page__body">
         <Carousel {...options}>
           <img
             src={require("./slides/image1.jpg")}
@@ -116,7 +117,7 @@ function Home(props) {
             </table>
           </section>
         </Container>
-      </div>
+      </main>
 
       <Footer className="home-page__footer" />
     </div>

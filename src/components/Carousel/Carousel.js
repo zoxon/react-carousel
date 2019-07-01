@@ -166,7 +166,6 @@ export default class Carousel extends React.PureComponent {
               React.Children.map(children, (child, index) => {
                 return (
                   <li
-                    key={child.key}
                     style={{
                       width: this.state.slideWidth + "px"
                     }}

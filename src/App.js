@@ -1,10 +1,11 @@
 import React from "react";
-import HomePage from "views/home";
+import RouterView from "components/RouterView";
+import routes from "./routes";
 
 function App() {
   return (
     <div className="app">
-      <HomePage />
+      <RouterView routes={routes} pathname={window.location.pathname} />
     </div>
   );
 }

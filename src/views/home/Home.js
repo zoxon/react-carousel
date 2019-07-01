@@ -56,7 +56,7 @@ function Home(props) {
               <a
                 href="https://github.com/zoxon/react-carousel/archive/master.zip"
                 target="_blank"
-                rel="nofollow noopener"
+                rel="noopener noreferrer"
               >
                 Download latest release
               </a>

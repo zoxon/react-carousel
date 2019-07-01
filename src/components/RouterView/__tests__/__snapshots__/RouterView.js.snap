@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RouterView renders 404 page with \`*\` route 1`] = `
+<RouterView
+  pathname="/not-found"
+  routes={
+    Object {
+      "*": [Function],
+    }
+  }
+>
+  <NotFoundPage
+    context={
+      Object {
+        "pathname": "/not-found",
+      }
+    }
+  >
+    <h1>
+      Not found page
+    </h1>
+  </NotFoundPage>
+</RouterView>
+`;
+
+exports[`RouterView renders 404 page without \`*\` route 1`] = `
+<RouterView
+  pathname="/not-found"
+  routes={
+    Object {
+      "/": [Function],
+    }
+  }
+>
+  <Component
+    context={
+      Object {
+        "pathname": "/not-found",
+      }
+    }
+  >
+    <span>
+      Page not found
+    </span>
+  </Component>
+</RouterView>
+`;
+
+exports[`RouterView renders without crashing 1`] = `
+<RouterView
+  pathname="/"
+  routes={
+    Object {
+      "/": [Function],
+    }
+  }
+>
+  <HomePage
+    context={
+      Object {
+        "pathname": "/",
+      }
+    }
+  >
+    <h1>
+      Home page
+    </h1>
+  </HomePage>
+</RouterView>
+`;

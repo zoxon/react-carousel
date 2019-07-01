@@ -33,14 +33,13 @@ class RouterView extends React.Component {
 }
 
 RouterView.defaultProps = {
-  pathname: "/",
-  routes: {}
+  pathname: "/"
 };
 
 RouterView.propTypes = {
   routes: PropTypes.object.isRequired,
   pathname: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired
+  children: PropTypes.node
 };
 
 export default RouterView;

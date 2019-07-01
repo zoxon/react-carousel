@@ -1,0 +1,269 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Carousel render arrows 1`] = `
+<Carousel
+  arrows={true}
+  autoplay={0}
+  bullets={false}
+>
+  <div
+    className="carousel carousel_ltr"
+  >
+    <div
+      className="carousel__track"
+      onMouseLeave={[Function]}
+      onMouseOver={[Function]}
+    >
+      <ul
+        className="carousel__slides"
+        style={
+          Object {
+            "transform": "translate3d(0px, 0px, 0px)",
+            "transition": "transform 700ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s",
+            "width": "0px",
+          }
+        }
+      >
+        <li
+          className="carousel__slide carousel__slide_active"
+          key=".0"
+          style={
+            Object {
+              "width": "0px",
+            }
+          }
+        >
+          <p>
+            Slide 1
+          </p>
+        </li>
+        <li
+          className="carousel__slide"
+          key=".1"
+          style={
+            Object {
+              "width": "0px",
+            }
+          }
+        >
+          <p>
+            Slide 2
+          </p>
+        </li>
+        <li
+          className="carousel__slide"
+          key=".2"
+          style={
+            Object {
+              "width": "0px",
+            }
+          }
+        >
+          <p>
+            Slide 3
+          </p>
+        </li>
+      </ul>
+    </div>
+    <div
+      className="carousel__arrows"
+    >
+      <button
+        className="carousel__arrow carousel__arrow_left"
+        onClick={[Function]}
+      >
+        <span
+          className="visually-hidden"
+        >
+          Previous
+        </span>
+      </button>
+      <button
+        className="carousel__arrow carousel__arrow_right"
+        onClick={[Function]}
+      >
+        <span
+          className="visually-hidden"
+        >
+          Next
+        </span>
+      </button>
+    </div>
+  </div>
+</Carousel>
+`;
+
+exports[`Carousel render bullets 1`] = `
+<Carousel
+  arrows={false}
+  autoplay={0}
+  bullets={true}
+>
+  <div
+    className="carousel carousel_ltr"
+  >
+    <div
+      className="carousel__track"
+      onMouseLeave={[Function]}
+      onMouseOver={[Function]}
+    >
+      <ul
+        className="carousel__slides"
+        style={
+          Object {
+            "transform": "translate3d(0px, 0px, 0px)",
+            "transition": "transform 700ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s",
+            "width": "0px",
+          }
+        }
+      >
+        <li
+          className="carousel__slide carousel__slide_active"
+          key=".0"
+          style={
+            Object {
+              "width": "0px",
+            }
+          }
+        >
+          <p>
+            Slide 1
+          </p>
+        </li>
+        <li
+          className="carousel__slide"
+          key=".1"
+          style={
+            Object {
+              "width": "0px",
+            }
+          }
+        >
+          <p>
+            Slide 2
+          </p>
+        </li>
+        <li
+          className="carousel__slide"
+          key=".2"
+          style={
+            Object {
+              "width": "0px",
+            }
+          }
+        >
+          <p>
+            Slide 3
+          </p>
+        </li>
+      </ul>
+    </div>
+    <div
+      className="carousel__bullets"
+    >
+      <button
+        className="carousel__bullet carousel__bullet_active"
+        key="0"
+        onClick={[Function]}
+      >
+        <span
+          className="visually-hidden"
+        >
+          1
+        </span>
+      </button>
+      <button
+        className="carousel__bullet"
+        key="1"
+        onClick={[Function]}
+      >
+        <span
+          className="visually-hidden"
+        >
+          2
+        </span>
+      </button>
+      <button
+        className="carousel__bullet"
+        key="2"
+        onClick={[Function]}
+      >
+        <span
+          className="visually-hidden"
+        >
+          3
+        </span>
+      </button>
+    </div>
+  </div>
+</Carousel>
+`;
+
+exports[`Carousel renders without crashing 1`] = `
+<Carousel
+  arrows={false}
+  autoplay={0}
+  bullets={false}
+>
+  <div
+    className="carousel carousel_ltr"
+  >
+    <div
+      className="carousel__track"
+      onMouseLeave={[Function]}
+      onMouseOver={[Function]}
+    >
+      <ul
+        className="carousel__slides"
+        style={
+          Object {
+            "transform": "translate3d(0px, 0px, 0px)",
+            "transition": "transform 700ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s",
+            "width": "0px",
+          }
+        }
+      >
+        <li
+          className="carousel__slide carousel__slide_active"
+          key=".0"
+          style={
+            Object {
+              "width": "0px",
+            }
+          }
+        >
+          <p>
+            Slide 1
+          </p>
+        </li>
+        <li
+          className="carousel__slide"
+          key=".1"
+          style={
+            Object {
+              "width": "0px",
+            }
+          }
+        >
+          <p>
+            Slide 2
+          </p>
+        </li>
+        <li
+          className="carousel__slide"
+          key=".2"
+          style={
+            Object {
+              "width": "0px",
+            }
+          }
+        >
+          <p>
+            Slide 3
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</Carousel>
+`;

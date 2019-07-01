@@ -4,19 +4,13 @@ import throttle from "lodash-es/throttle";
 
 export default class Carousel extends React.PureComponent {
   static defaultProps = {
-    slides: [],
     bullets: false,
     arrows: false,
     autoplay: 0
   };
 
   static propTypes = {
-    slides: PropTypes.arrayOf(
-      PropTypes.shape({
-        image: PropTypes.string.isRequired,
-        alt: PropTypes.string.isRequired
-      })
-    ).isRequired,
+    children: PropTypes.node.isRequired,
     bullets: PropTypes.bool,
     arrows: PropTypes.bool,
     autoplay: PropTypes.number
@@ -84,7 +78,7 @@ export default class Carousel extends React.PureComponent {
 
   updateSizes() {
     const slideWidth = this.trackEl.clientWidth;
-    const slidesCount = this.props.slides.length;
+    const slidesCount = React.Children.count(this.props.children);
     const trackWidth = slidesCount * slideWidth;
 
     this.setState(
@@ -133,8 +127,31 @@ export default class Carousel extends React.PureComponent {
     });
   }
 
+  renderBullets() {
+    const count = this.state.slidesCount;
+    const bullets = [];
+
+    for (let index = 0; index < count; index++) {
+      bullets.push(
+        <button
+          key={index}
+          className={
+            index === this.state.currentSlide
+              ? "carousel__bullet carousel__bullet--active"
+              : "carousel__bullet"
+          }
+          onClick={() => this.onBulletClick(index)}
+        >
+          <span className="visually-hidden">{index + 1}</span>
+        </button>
+      );
+    }
+
+    return bullets;
+  }
+
   render() {
-    const { slides, arrows, bullets } = this.props;
+    const { children, arrows, bullets } = this.props;
 
     return (
       <div className="carousel carousel--ltr">
@@ -145,22 +162,24 @@ export default class Carousel extends React.PureComponent {
           onMouseLeave={this.onMouseLeave}
         >
           <ul className="carousel__slides" style={this.state.slidesStyles}>
-            {slides.length > 0 &&
-              slides.map(({ image, alt }, index) => (
-                <li
-                  key={image}
-                  style={{
-                    width: this.state.slideWidth + "px"
-                  }}
-                  className={
-                    index === this.state.currentSlide
-                      ? "carousel__slide carousel__slide--active"
-                      : "carousel__slide"
-                  }
-                >
-                  <img src={image} alt={alt} />
-                </li>
-              ))}
+            {children &&
+              React.Children.map(children, (child, index) => {
+                return (
+                  <li
+                    key={child.key}
+                    style={{
+                      width: this.state.slideWidth + "px"
+                    }}
+                    className={
+                      index === this.state.currentSlide
+                        ? "carousel__slide carousel__slide--active"
+                        : "carousel__slide"
+                    }
+                  >
+                    {child}
+                  </li>
+                );
+              })}
           </ul>
         </div>
 
@@ -182,22 +201,7 @@ export default class Carousel extends React.PureComponent {
         )}
 
         {bullets && (
-          <div className="carousel__bullets">
-            {slides.length > 0 &&
-              slides.map((_, index) => (
-                <button
-                  key={index}
-                  className={
-                    index === this.state.currentSlide
-                      ? "carousel__bullet carousel__bullet--active"
-                      : "carousel__bullet"
-                  }
-                  onClick={() => this.onBulletClick(index)}
-                >
-                  <span className="visually-hidden">{index + 1}</span>
-                </button>
-              ))}
-          </div>
+          <div className="carousel__bullets">{this.renderBullets()}</div>
         )}
       </div>
     );

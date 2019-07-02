@@ -58,16 +58,16 @@ exports[`RouterView renders without crashing 1`] = `
     }
   }
 >
-  <HomePage
+  <Component
     context={
       Object {
         "pathname": "/",
       }
     }
   >
-    <h1>
-      Home page
-    </h1>
-  </HomePage>
+    <span>
+      Page not found
+    </span>
+  </Component>
 </RouterView>
 `;

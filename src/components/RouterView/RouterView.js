@@ -2,12 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import history from "lib/history";
+import { removeBasename } from "lib/utils";
 
 const DEFAULT_PATHNAME = "*";
-
-const addLeadingSlash = path => {
-  return path.charAt(0) === "/" ? path : "/" + path;
-};
 
 class RouterView extends React.Component {
   state = {
@@ -27,12 +24,10 @@ class RouterView extends React.Component {
   };
 
   render() {
-    const path = addLeadingSlash(
-      this.props.basename + this.state.pathname
-    ).replace("//", "/");
+    const path = removeBasename(this.props.basename, this.state.pathname);
 
     const Component =
-      this.props.routes[path] ||
+      this.props.routes[path + this.state.pathname] ||
       this.props.routes[DEFAULT_PATHNAME] ||
       (() => <span>Page not found</span>);
 

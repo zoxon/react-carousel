@@ -3,9 +3,11 @@
 _A lightweight, slider and carousel, for React.js_
 
 ## Table of Contents
+
 - [Installation](#Installation)
 - [API documentation](#API-documentation)
 - [Examples](#Examples)
+- [Design files](#Design-files)
 - [Docs and Demos](#Docs-and-Demos)
 - [Available Scripts](#Available-Scripts)
   - [`npm start`](#npm-start)
@@ -52,6 +54,10 @@ function App(props) {
 
 ReactDOM.render(<App />, appElement);
 ```
+
+## Design files
+
+[Slider and demo](https://www.figma.com/file/JuuaO1O9i9cNh6Dfk83y5xq0/Untitled?node-id=1%3A17)
 
 ## Docs and Demos
 

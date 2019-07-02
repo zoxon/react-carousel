@@ -2,6 +2,7 @@
 
 exports[`RouterView renders 404 page with \`*\` route 1`] = `
 <RouterView
+  basename=""
   pathname="/not-found"
   routes={
     Object {
@@ -25,6 +26,7 @@ exports[`RouterView renders 404 page with \`*\` route 1`] = `
 
 exports[`RouterView renders 404 page without \`*\` route 1`] = `
 <RouterView
+  basename=""
   pathname="/not-found"
   routes={
     Object {
@@ -48,6 +50,7 @@ exports[`RouterView renders 404 page without \`*\` route 1`] = `
 
 exports[`RouterView renders without crashing 1`] = `
 <RouterView
+  basename=""
   pathname="/"
   routes={
     Object {

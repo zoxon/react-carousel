@@ -5,6 +5,10 @@ import history from "lib/history";
 
 const DEFAULT_PATHNAME = "*";
 
+const addLeadingSlash = path => {
+  return path.charAt(0) === "/" ? path : "/" + path;
+};
+
 class RouterView extends React.Component {
   state = {
     pathname: "/"
@@ -23,8 +27,12 @@ class RouterView extends React.Component {
   };
 
   render() {
+    const path = addLeadingSlash(
+      this.props.basename + this.state.pathname
+    ).replace("//", "/");
+
     const Component =
-      this.props.routes[this.state.pathname] ||
+      this.props.routes[path] ||
       this.props.routes[DEFAULT_PATHNAME] ||
       (() => <span>Page not found</span>);
 
@@ -33,13 +41,15 @@ class RouterView extends React.Component {
 }
 
 RouterView.defaultProps = {
-  pathname: "/"
+  pathname: "/",
+  basename: ""
 };
 
 RouterView.propTypes = {
   routes: PropTypes.object.isRequired,
   pathname: PropTypes.string.isRequired,
-  children: PropTypes.node
+  children: PropTypes.node,
+  basename: PropTypes.string
 };
 
 export default RouterView;

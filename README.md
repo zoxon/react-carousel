@@ -4,7 +4,6 @@ _A lightweight, slider and carousel, for React.js_
 
 ## Table of Contents
 
-- [Installation](#Installation)
 - [API documentation](#API-documentation)
 - [Examples](#Examples)
 - [Design files](#Design-files)
@@ -14,15 +13,6 @@ _A lightweight, slider and carousel, for React.js_
   - [`npm test`](#npm-test)
   - [`npm run build`](#npm-run-build)
   - [`npm run eject`](#npm-run-eject)
-
-## Installation
-
-To install, you can use [npm](https://npmjs.org/) or [yarn](https://yarnpkg.com):
-
-```sh
-$ npm install @zoxon/react-carousel
-$ yarn add @zoxon/react-carousel
-```
 
 ## API documentation
 
@@ -40,7 +30,10 @@ Here is a simple example of `react-carousel`:
 ```jsx
 import React from "react";
 import ReactDOM from "react-dom";
-import Carousel from "@zoxon/react-carousel";
+import Carousel from "components/Carousel";
+
+import "components/Carousel/styles/core.css";
+import "components/Carousel/styles/theme/theme.default.css";
 
 function App(props) {
   return (

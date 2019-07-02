@@ -42,16 +42,9 @@ function Home(props) {
         <Container className="home-page__text">
           <section>
             <h2 id="get-started">Installation</h2>
-            <p>There are several ways to add react-carousel to your project.</p>
-            <h3>NPM</h3>
-            <p>
-              It is a recommended way. This installation method guarantees a
-              trouble-free use with bundlers like Webpack or Rollup.
-            </p>
-            <code>npm install @zoxon/react-carousel</code>
             <h3>Download</h3>
             <p>
-              You can also traditionally download latest files from the Github:
+              Download latest files from the Github:
               <br />
               <a
                 href="https://github.com/zoxon/react-carousel/archive/master.zip"
@@ -66,13 +59,24 @@ function Home(props) {
           <section>
             <h2>Initialization</h2>
             <pre className="code">
-              <code className="code__container">{`import { Carousel, Slide } from "@zoxon/react-carousel";
+              <code className="code__container">{`import React from "react";
+import ReactDOM from "react-dom";
+import Carousel from "components/Carousel";
 
-<Carousel>
-  <img src="/images/slide1.jpg" alt="Slide 1" />
-  <img src="/images/slide2.jpg" alt="Slide 2" />
-  <img src="/images/slide3.jpg" alt="Slide 3" />
-</Carousel>`}</code>
+import "components/Carousel/styles/core.css";
+import "components/Carousel/styles/theme/theme.default.css";
+
+function App(props) {
+  return (
+    <Carousel arrows bullets autoplay={3000}>
+      <img src="/images/slide1.jpg" alt="Slide 1" />
+      <img src="/images/slide2.jpg" alt="Slide 2" />
+      <img src="/images/slide3.jpg" alt="Slide 3" />
+    </Carousel>
+  );
+}
+
+ReactDOM.render(<App />, appElement);`}</code>
             </pre>
           </section>
 

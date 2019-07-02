@@ -24,10 +24,13 @@ class RouterView extends React.Component {
   };
 
   render() {
-    const path = removeBasename(this.props.basename, this.state.pathname);
+    const path = removeBasename(
+      this.props.basename,
+      this.state.pathname
+    ).replace(/\\\//gi, "/");
 
     const Component =
-      this.props.routes[path + this.state.pathname] ||
+      this.props.routes[path] ||
       this.props.routes[DEFAULT_PATHNAME] ||
       (() => <span>Page not found</span>);
 
@@ -37,7 +40,7 @@ class RouterView extends React.Component {
 
 RouterView.defaultProps = {
   pathname: "/",
-  basename: ""
+  basename: "/"
 };
 
 RouterView.propTypes = {

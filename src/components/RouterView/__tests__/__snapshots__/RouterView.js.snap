@@ -2,7 +2,7 @@
 
 exports[`RouterView renders 404 page with \`*\` route 1`] = `
 <RouterView
-  basename=""
+  basename="/"
   pathname="/not-found"
   routes={
     Object {
@@ -26,7 +26,7 @@ exports[`RouterView renders 404 page with \`*\` route 1`] = `
 
 exports[`RouterView renders 404 page without \`*\` route 1`] = `
 <RouterView
-  basename=""
+  basename="/"
   pathname="/not-found"
   routes={
     Object {
@@ -50,7 +50,7 @@ exports[`RouterView renders 404 page without \`*\` route 1`] = `
 
 exports[`RouterView renders without crashing 1`] = `
 <RouterView
-  basename=""
+  basename="/"
   pathname="/"
   routes={
     Object {
@@ -58,16 +58,16 @@ exports[`RouterView renders without crashing 1`] = `
     }
   }
 >
-  <Component
+  <HomePage
     context={
       Object {
         "pathname": "/",
       }
     }
   >
-    <span>
-      Page not found
-    </span>
-  </Component>
+    <h1>
+      Home page
+    </h1>
+  </HomePage>
 </RouterView>
 `;

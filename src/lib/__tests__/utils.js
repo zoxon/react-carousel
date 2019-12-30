@@ -29,22 +29,3 @@ it("mapTheme", () => {
     "button_style_rounded"
   ]);
 });
-
-it("addLeadingSlash", () => {
-  expect(addLeadingSlash("/")).toEqual("/");
-  expect(addLeadingSlash("/test")).toEqual("/test");
-  expect(addLeadingSlash("test")).toEqual("/test");
-  expect(addLeadingSlash("test/")).toEqual("/test/");
-  expect(addLeadingSlash("")).toEqual("/");
-  expect(addLeadingSlash(undefined)).toEqual("/");
-});
-
-it("removeBasename", () => {
-  expect(removeBasename("", "/")).toEqual("/");
-  expect(removeBasename("", "/")).toEqual("/");
-  expect(removeBasename("/base/path", "/")).toEqual("/");
-  expect(removeBasename("/base/path/", "/")).toEqual("/");
-  expect(removeBasename("/base/path/", "/base/path//test")).toEqual("/test");
-  expect(removeBasename("/test", "/test")).toEqual("/");
-  expect(removeBasename("/test/", "/test")).toEqual("/");
-});

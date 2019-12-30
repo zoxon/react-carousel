@@ -1,17 +1,11 @@
 import React from "react";
 
-import RouterView from "components/RouterView";
-import { PUBLIC_PATH } from "./constants";
-import routes from "./routes";
+import Home from "views/Home";
 
 function App() {
   return (
     <div className="app">
-      <RouterView
-        routes={routes}
-        pathname={window.location.pathname}
-        basename={PUBLIC_PATH}
-      />
+      <Home />
     </div>
   );
 }

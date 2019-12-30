@@ -5,6 +5,7 @@
 .carousel__slide img {
   width: 100%;
   height: auto;
+  display: block;
 }
 
 .carousel__arrow {
@@ -99,4 +100,19 @@
   overflow: hidden;
   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
+}
+
+@media screen and (max-width: 768px) {
+  .carousel__bullets {
+    bottom: 8px;
+  }
+
+  .carousel__bullet::before {
+    width: 4px;
+    height: 4px;
+  }
+
+  .carousel__arrow {
+    display: none;
+  }
 }

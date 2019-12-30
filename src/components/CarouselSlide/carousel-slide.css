@@ -1,0 +1,44 @@
+.carousel-slide {
+  position: relative;
+}
+
+.carousel-slide__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  padding: 1.5em 1.5em 4.5em 1.5em;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+}
+
+.carousel-slide__author {
+  font-size: 1.5em;
+}
+
+.carousel-slide__title {
+  font-size: 3.5em;
+  line-height: 1.2;
+}
+
+@media screen and (max-width: 1140px) {
+  .carousel-slide__title {
+    font-size: 2.5em;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .carousel-slide__author {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .carousel-slide__title {
+    font-size: 2em;
+  }
+}

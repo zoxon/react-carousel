@@ -3,6 +3,7 @@ import Carousel from "components/Carousel";
 import Header from "components/Header";
 import Footer from "components/Footer";
 import Container from "components/Container";
+import CarouselSlide from "components/CarouselSlide";
 
 import "./home.css";
 import "components/Carousel/styles/core.css";
@@ -14,6 +15,29 @@ const options = {
   autoplay: 3000
 };
 
+const slides = [
+  {
+    image: require("./slides/image1.jpg"),
+    title: "North shore",
+    author: "翔音"
+  },
+  {
+    image: require("./slides/image2.jpg"),
+    title: "Orange clouds over mountains",
+    author: "Nitish Meena"
+  },
+  {
+    image: require("./slides/image3.jpg"),
+    title: "Icy blue mountain range",
+    author: "Elena Prokofyeva"
+  },
+  {
+    image: require("./slides/image4.jpg"),
+    title: "Blue lake and green shore",
+    author: "Andreas Gücklhorn"
+  }
+];
+
 function Home(props) {
   return (
     <div className="home-page">
@@ -21,22 +45,9 @@ function Home(props) {
 
       <main className="home-page__body">
         <Carousel {...options}>
-          <img
-            src={require("./slides/image1.jpg")}
-            alt="North shore (Author 翔音)"
-          />
-          <img
-            src={require("./slides/image2.jpg")}
-            alt="Orange clouds over mountains (Author Nitish Meena)"
-          />
-          <img
-            src={require("./slides/image3.jpg")}
-            alt="Icy blue mountain range (Author Elena Prokofyeva)"
-          />
-          <img
-            src={require("./slides/image4.jpg")}
-            alt="Blue lake and green shore (Author Andreas Gücklhorn)"
-          />
+          {slides.map(slide => (
+            <CarouselSlide {...slide} />
+          ))}
         </Carousel>
 
         <Container className="home-page__text">
